@@ -1,0 +1,73 @@
+# Key Findings & Insights – AI-Based Personal Finance Behavior Classifier
+
+This document summarizes the major insights, patterns, and business takeaways from our end-to-end classification project that analyzes user financial behavior in an Indian context using synthetic data.
+
+1. Income Level ≠ Better Saving Habits
+* High-income users had a higher average savings rate (0.40), but:
+* Low and middle-income groups often showed negative or very low savings rates, indicating overspending behavior despite modest earnings.
+
+Takeaway: Financial well-being is not solely dependent on income. Education around financial planning is critical across all income levels.
+
+2. Spending Behavior Varies by City Tier
+| City Tier | Saver | Balanced | Over-Spender |
+| --------- | ----- | -------- | ------------ |
+| Tier-1    | 126   | 39       | 111          |
+| Tier-2    | 133   | 53       | 119          |
+| Tier-3    | 60    | 22       | 87           |
+
+* Tier-2 cities had the highest count of Savers, while Tier-3 showed higher over-spending, likely due to rising aspirations but limited literacy or resources.
+
+Takeaway: Fintech apps targeting Tier-2 and Tier-3 cities should customize strategies based on spending psychology, not just location.
+
+3. Financial Literacy Has Weak Correlation With Savings Rate
+* The correlation between Financial Literacy Score and Savings Rate was just 0.03.
+* Surprisingly, users with 60–80 literacy scores had poorer average savings rates than some with lower scores.
+
+Takeaway: Financial awareness alone doesn’t guarantee action. Behavioral nudges and app-based reinforcement might be needed to translate knowledge into action.
+
+4. Dependents Do Not Always Reduce Savings
+| Dependents | Avg Savings (INR) |
+| ---------- | ----------------- |
+| 0          | ₹15,537           |
+| 1          | ₹20,543           |
+| 2          | ₹18,358           |
+| 3          | ₹15,917           |
+| 4          | ₹19,812           |
+
+* Surprisingly, users with 1–2 dependents had higher savings on average than those with none or 3+ dependents.
+
+Takeaway: Having dependents may motivate disciplined saving, contrary to assumptions. Personal finance advice should be context-aware.
+
+5. Spending Pattern is Heavily Driven by Savings Rate
+Top features influencing behavior: Savings Rate, Total Savings, Income, Income Level (Encoded), Total Expenses
+* These factors drove 90%+ of the model's accuracy.
+* Model reached 100% accuracy on the test set (synthetic), indicating distinct separability of spender profiles based on financial metrics.
+
+Takeaway: With the right data points, it's possible to automatically classify users and provide tailored nudges/offers based on their behavior type.
+
+6. Over-Spenders Have Higher EMI Loads
+| Category     | Avg EMI (₹) |
+| ------------ | ----------- |
+| Saver        | 13,487      |
+| Balanced     | 17,094      |
+| Over-Spender | 16,262      |
+
+* Balanced and Over-Spenders had higher EMI obligations, hinting at aggressive borrowing behavior.
+
+Takeaway: EMI monitoring can be used to proactively predict and curb potential overspending patterns using ML models.
+
+#### **Dashboard Added for Deeper Visual Exploration**
+* A Tableau dashboard was built to allow users, businesses, and researchers to:
+* Interact with filters like city tier, income level, dependents
+* Visually assess spending vs saving behavior
+* Track EMI trends and financial literacy patterns
+
+
+Link to Dashboard : https://public.tableau.com/views/AI-poweredfinancialbehaviorclassification/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+#### **Final Thoughts**
+
+This project proves that:
+* Behavioral finance + machine learning can segment users meaningfully.
+* There's immense potential in applying AI to personal finance apps for tailored insights.
+* Strategic design of data collection pipelines, paired with interactive dashboards, can empower both individuals and financial businesses.

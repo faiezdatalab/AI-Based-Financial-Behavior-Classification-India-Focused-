@@ -1,4 +1,4 @@
-# AI-Based-Financial-Behavior-Classification-India-Focused-
+# AI-Based-Financial-Behavior-Classification
 
 Live Dashboard: https://public.tableau.com/views/AI-poweredfinancialbehaviorclassification/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
 
